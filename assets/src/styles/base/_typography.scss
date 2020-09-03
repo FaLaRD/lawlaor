@@ -323,10 +323,13 @@ strong {
   }
 
   blockquote {
-    margin-left: 6rem;
     border-left: 2px solid $primary-color;
     font-weight: 500;
     padding-left: 3rem;
+
+    @media (min-width: $md) {
+      margin-left: 6rem;
+    }
 
     &.intro {
       margin-bottom: 5rem;

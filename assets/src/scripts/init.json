@@ -6,5 +6,6 @@
   "components/developer.js",
   "components/select.js",
   "components/carousel.js",
-  "components/navbar.js"
+  "components/navbar.js",
+  "components/scroll-next.js"
 ]

@@ -104,11 +104,11 @@
   function cropLangText() {
     if ( window.matchMedia("(max-width: 767px)").matches ) {
       let el = document.querySelector('.select-lang .choices__item--selectable');
-      el.innerHTML = el.dataset.value;
+      el.innerHTML = '<span class="country-icon ' + el.dataset.value +  '"></span>' + el.dataset.value;
 
       document.querySelector('.select-lang .js-select-region').addEventListener('change', function(e) {
         let el = document.querySelector('.select-lang .choices__item--selectable');
-        el.innerHTML = e.detail.value;
+        el.innerHTML = '<span class="country-icon ' + e.detail.value +  '"></span>' + e.detail.value;
       });
     }
   }

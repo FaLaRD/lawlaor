@@ -10,7 +10,6 @@
       //type: 'fraction',
       type: 'custom',
       renderCustom: function (swiper, current, total) {
-        console.log('0' + current);
         return '<span class="swiper-pagination-current">' + ('0' + current).slice(-2) + '</span> / <span class="swiper-pagination-total">' + ('0' + total).slice(-2) + '</span>';
       }
     },
@@ -51,7 +50,6 @@
       //type: 'fraction',
       type: 'custom',
       renderCustom: function (swiper, current, total) {
-        console.log('0' + current);
         return '<span class="swiper-pagination-current">' + ('0' + current).slice(-2) + '</span> / <span class="swiper-pagination-total">' + ('0' + total).slice(-2) + '</span>';
       }
     },
@@ -78,7 +76,6 @@
       el: '.js-interactive-pagination',
       type: 'custom',
       renderCustom: function (swiper, current, total) {
-        console.log('0' + current);
         return '<span class="swiper-pagination-current">' + ('0' + current).slice(-2) + '</span> / <span class="swiper-pagination-total">' + ('0' + total).slice(-2) + '</span>';
       }
     },

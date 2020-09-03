@@ -16,18 +16,38 @@
     }
   }
 
+  &__wrap {
+    @media (min-width: $md) and (max-width: $lg--mw) {
+      display: flex;
+      align-items: center;
+
+      .intro__container {
+        max-width: 50%;
+      }
+
+      .intro__info-main {
+        order: -1;
+        max-width: 50%;
+      }
+
+      .intro__hero-wrap {
+        margin: 0;
+      }
+    }
+  }
+
   &__hero-wrap {
     max-width: 60rem;
     margin: 0 auto 4rem;
 
-    @media (min-width: $md) {
-      max-width: none;
-      margin: 0;
+    @media (min-width: $lg) {
       padding-left: 50%;
+      margin: 0;
     }
-    
+
     @media (min-width: 1600px) {
       padding-left: 25%;
+      max-width: none;
     }
   }
 
@@ -36,7 +56,7 @@
     width: 100%;
     position: relative;
 
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       top: 0;
       position: absolute;
       height: calc(100% + 24.5rem);
@@ -69,22 +89,21 @@
     // max-width: 55.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    
-    @media (min-width: $sm) {
-      width: 50%;
-      margin-left: auto;
-      margin-right: auto;
-    }
 
     @media (min-width: $md) {
       padding-left: 3rem;
       margin: 0;
     }
     
+    @media (min-width: $lg) {
+      padding-left: 3rem;
+      width: 50%;
+    }
+    
     @media (min-width: $xl) {
       padding-left: 22rem;
     }
-    
+
     @media (min-width: 1600px) {
       padding-right: 0;
       width: 32%;
@@ -94,7 +113,7 @@
   .entry {
     word-wrap: break-word;
     
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       max-width: 50%;
       width: 100%;
     }

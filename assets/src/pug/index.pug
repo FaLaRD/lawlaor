@@ -19,32 +19,34 @@ block header
           .entry__heading About us
             span.entry__desc Solicitors &amp; Tax Consultants all under the one roof.
 
-        .intro__container
+        .intro__wrap
 
-          .intro__hero-wrap
-            .intro__hero
-              img.intro__img(src="img/about-promo.jpg" alt="")
-            .scroll-next.d-none.d-xl-block
-              .scroll-next__desc Scroll down
-              +icon('scroll', 'scroll-next__icon')
+          .intro__container
 
-        .intro__info-main
-          p.intro__desc Lawlor Kiernan LLP is a progressive legal and tax firm offering specialist advice. The practice was founded in 1995 and has established a reputation for the provision of high quality legal and tax services.
+            .intro__hero-wrap
+              .intro__hero
+                img.intro__img(src="img/about-promo.jpg" alt="")
+              .scroll-next.d-none.d-xl-block
+                .scroll-next__desc Scroll down
+                +icon('scroll', 'scroll-next__icon')
 
-          a.intro__btn.btn(href="#") 
-            span Learn More
-            +icon('arrow-right', 'intro__btn-icon')
+          .intro__info-main
+            p.intro__desc Lawlor Kiernan LLP is a progressive legal and tax firm offering specialist advice. The practice was founded in 1995 and has established a reputation for the provision of high quality legal and tax services.
 
-          .partner__details
-            ul
-              li 
-                a(href="tel:+018725255") 
-                  +icon('phone-call')
-                  span 01 872 5255
-              li 
-                a(href="mailto:info@lawlorpartners.ie")
-                  +icon('email')
-                  span info@lawlorpartners.ie
+            a.intro__btn.btn(href="#") 
+              span Learn More
+              +icon('arrow-right', 'intro__btn-icon')
+
+            .partner__details
+              ul
+                li 
+                  a(href="tel:+018725255") 
+                    +icon('phone-call')
+                    span 01 872 5255
+                li 
+                  a(href="mailto:info@lawlorpartners.ie")
+                    +icon('email')
+                    span info@lawlorpartners.ie
   // /intro
 
   // advantages
