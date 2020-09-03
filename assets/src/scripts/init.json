@@ -1,0 +1,10 @@
+[
+  "../../../node_modules/bootstrap/dist/js/bootstrap.min.js",
+  "../../../node_modules/choices.js/public/assets/scripts/choices.min.js",
+  "../../../node_modules/swiper/js/swiper.min.js",
+  "components/utils.js",
+  "components/developer.js",
+  "components/select.js",
+  "components/carousel.js",
+  "components/navbar.js"
+]

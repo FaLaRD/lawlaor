@@ -1,0 +1,207 @@
+extends templates/main
+
+block variables
+  - const title = 'Partners';
+  - const pageClass = 'partners-page';
+
+block content
+
+  main.primary
+  
+    .container-fluid
+
+      section.partners-intro
+
+        .partner
+
+          .partner__img-wrap.cornered.mg-negative
+            img.partner__img(src="img/partners.jpg" alt="")
+
+          .partner__heading.entry
+            h1.entry__heading About Us
+              span.entry__desc Solicitors &amp; Tax #[br] Consultants all #[br] under the #[br] one roof.
+
+          .partner__desc
+            p Lawlor Partners is a progressive legal and tax firm offering specialist advice. The practice was founded in 1995 and has established a reputation for the provision of high quality legal and tax services.
+
+            p The environment in which our clients are operating is ever changing and this requires us to have the ability to adapt and meet new challenges. Our clients expect first-class advice delivered in a constructive, practical and commercial manner which is innovative and always tailored to meet our clients’ needs. As a general practice firm with extensive experience in property, taxation, litigation and data protection, our team have a diverse range of skills and expertise.
+
+            p Our practitioners offer a considered and practical approach to meeting client needs and we work hard to understand and achieve our clients’ objectives. Our goal is to deliver results whilst maintaining the highest standards of professional conduct and integrity. We understand the importance of responsiveness, value for money and excellent service delivery.
+
+    .section-negative
+
+      section.section.section--bg
+
+        .container-fluid
+
+          .partner
+
+            .partner__img-wrap.cornered
+              img.partner__img(src="img/partner-1.jpg" alt="")
+
+            .partner__heading.entry
+              .entry__heading Our people
+                span.entry__desc Fintan Lawlor
+
+            .partner__desc
+              p #[strong Fintan Lawlor is the Principal in Lawlor Partners Solicitors. He has extensive experience in handling all aspects of complex and non-complex legal matters. Fintan is among Ireland’s most highly regarded litigation and dispute resolution lawyers and clients regularly seek his expertise to assist in the following areas:]
+
+              ul.list
+                li Judicial Review
+                li Regulatory Litigation
+                li Medical Negligence
+                li Data Protection Law
+                li Personal Injury Matters
+                li Tribunals of Investigation
+                li Tribunals of Enquiry
+                li Professional Negligence
+                li IT/IP Disputes
+
+      .experience
+        .experience__heading Experience
+        ul.experience__list.list
+          li.experience__item Fintan is currently representing a client before the Tribunal of Enquiries into protected disclosures made under the Protected Disclosures Act 2014 and certain other matters (Charleton Tribunal of Enquiry)
+          li.experience__item Fintan acted on behalf of a client at the Smithwick Tribunal of Inquiry.
+          li.experience__item Fintan represents doctors and nurses before the Medical Council of Ireland.
+          li.experience__item Fintan acted on behalf of the only person to secure damages before the Courts for a Data Protection breach.
+          li.experience__item Fintan has acted in a number of High Court cases involving Data Protection.
+    
+  .container-fluid
+
+    .section
+
+      .partner.partner--reverse
+
+        .partner__img-wrap.cornered
+          img.partner__img(src="img/partner-2.jpg" alt="")
+
+        .partner-heading.entry
+          .entry__heading Our people
+            span.entry__desc Olivia Lawlor
+
+        .partner__desc
+
+          p #[strong Olivia Lawlor graduated from University College Dublin with a degree in Business and Law in 1999 and was admitted to the Roll of Solicitors in 2004. She joined the firm in 2000 as a Trainee Solicitor.]
+
+          p Olivia has gained a broad range of experience in residential &amp; commercial conveyancing and acts for private clients and investors in relation to the purchase and sale of homes, retail units and commercial property.
+
+          p Olivia also has vast experience in the areas of commercial lending, landlord &amp; tenant law and administration of estates.
+
+  .section.section--bg
+
+    .container-fluid
+
+      .partner
+
+        .partner__img-wrap.cornered
+          img.partner__img(src="img/partner-3.jpg" alt="")
+
+        .partner__heading.entry
+          .entry__heading Our people
+            span.entry__desc Siobhán Matthews
+
+        .partner__desc.partner__desc--constraint
+
+          p #[strong Siobhán graduated from DIT with a Postgraduate Diploma in Law in 2014. She joined the firm as a trainee solicitor in July 2017. Prior to joining Lawlor Partners Solicitors, Siobhán gained extensive experience in both defence and plaintiff litigation.]
+
+          p Siobhán currently provides support to the solicitors in the litigation department in relation to both High Court and Circuit Court personal injury claims, medical negligence law, data protection law, employment law, defamation and breach of contract. She also provides support to the solicitors in the conveyancing department in both commercial and residential property transactions.
+
+          p Siobhán has a keen interest in all aspects of litigation, particularly in medical negligence and personal injury claims.
+
+  .container-fluid
+
+    .section
+
+      .partner.partner--reverse
+
+        .partner__extra
+
+          .partner__heading.entry.d-md-none
+            .entry__heading Our people
+              span.entry__desc Fintan Lawlor
+
+          .row
+
+            .col-md-6
+
+              .partner__img-wrap.cornered
+                img.partner__img(src="img/partner-4.jpg" alt="")
+
+              .partner__details
+                ul
+                  li 
+                    a(href="tel:+018725255") 
+                      +icon('phone-call')
+                      span 01 872 5255
+                  li 
+                    a(href="mailto:niall@lawlorpartners.ie")
+                      +icon('email')
+                      span niall@lawlorpartners.ie
+                  li
+                    a(href="#") 
+                      +icon('email')
+                      span LinkedIn
+                      +icon('arrow-right')
+                dl
+                  div
+                    dt Practise Area: 
+                    dd Litigation
+                  div
+                    dt Admitted as a Solicitor: 
+                    dd 2012
+                  div
+                    dt Education:
+                    dd BA, LL.B National University of Ireland, Galway.
+
+            .col-md-6
+
+              .partner__heading.entry.d-none.d-md-block
+                .entry__heading Our people
+                  span.entry__desc Fintan Lawlor
+
+              .partner__desc.text-left
+
+                p #[strong Niall is an associate solicitor with Lawlor Partners. Having trained with the firm, he now works in the firm’s litigation department and regularly represents clients in the Commercial, High and Circuit Court.]
+
+                p Niall has worked on numerous high value personal and fatal injury claims, medical negligence, employment law injunctions, contractual disputes and defamation actions. He is currently one of the leading solicitors in Ireland representing clients in tracker mortgage overcharging cases; particularly customers who have been put back onto the incorrect tracker rate.
+
+                p #[strong Niall specialises in the following areas of litigation:]
+
+                ul.list
+                  li Personal and fatal injury
+                  li Medical negligence
+                  li Defamation
+                  li Employment law disputes
+                  li Contractual and banking disputes
+
+      .experience
+        .experience__heading Experience
+        ul.experience__list.list
+          li.experience__item Fintan is currently representing a client before the Tribunal of Enquiries into protected disclosures made under the Protected Disclosures Act 2014 and certain other matters (Charleton Tribunal of Enquiry)
+          li Fintan acted on behalf of a client at the Smithwick Tribunal of Inquiry.
+          li Fintan represents doctors and nurses before the Medical Council of Ireland.
+          li Fintan acted on behalf of the only person to secure damages before the Courts for a Data Protection breach.
+          li Fintan has acted in a number of High Court cases involving Data Protection.
+
+  .section.section--bg
+
+    .container-fluid
+
+      .partner
+
+        .partner__img-wrap.cornered
+          img.partner__img(src="img/partner-5.jpg" alt="")
+
+        .partner__heading.entry
+          .entry__heading Our people
+            span.entry__desc Cathal Lawlor
+
+        .partner__desc
+
+          p #[strong Cathal Lawlor established the tax division within Lawlor Partners in 2006. That division provides advice on a wide range of tax issues including Income Tax, Capital Gains Tax, Capital Acquisitions Tax and Stamp Duty.]
+
+          p CAthal Lawlor has particular expertise in advising on property transactions, family partnerships, transfer of assets to the next generation, tax efficient remuneration and Revenue investigations.
+
+          p He joined Deloitte in 1996 after graduating from UCD with a Bachelor of Commerce degree. He qualified from the Institute of Tax in 1999. Cathal gained a wide range of experience in both Personal and Corporate Tax with Deloitte before joining Mazars in 2001. He managed the Personal Wealth Division for Mazars before joining the family practice.
+
+          p He has presented to a number of business forums and Chambers of Commerce and has contributed to a number of publications on Tax matters including the Sunday Business Post and the Sunday Tribune.

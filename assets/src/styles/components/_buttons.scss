@@ -1,0 +1,243 @@
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  font-size: 1.6rem;
+  border: 2px solid transparent;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $btn-color;
+  line-height: 1.2;
+  outline: none;
+  vertical-align: middle;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: $btn-radius;
+  position: relative;
+  font-weight: 500;
+  width: auto;
+  transition: all .3s;
+
+  &[disabled] {
+    color: $btn-color-disabled;
+    cursor: default;
+    pointer-events: none;
+    //opacity: .7;
+    //filter: grayscale(50%);
+  }
+
+  &:hover {
+    color: $btn-color;
+  }
+
+  /* --- Buttons Types --- */
+  &--primary {
+    color: $btn-primary-color;
+    background: $btn-primary-bg;
+
+    &:hover {
+      background: $btn-primary-hover;
+    }
+
+    &:active {
+      background: mix(black, $primary-color, 15%);
+    }
+
+    &[disabled] {
+      background-color: $btn-primary-disabled;
+    }
+
+    &-reverse {
+      color: $btn-primary-bg;
+      border-color: $btn-primary-bg;
+
+      &:hover {
+        color: $white;
+        background: $btn-primary-bg;
+        border-color: $btn-primary-bg;
+
+        svg,
+        i {
+          color: $white;
+          fill: $white;
+        }
+      }
+
+      &:active {
+        background: mix(black, $primary-color, 15%);
+        border-color: mix(black, $primary-color, 15%);
+      }
+
+      &[disabled] {
+        border-color: $btn-primary-disabled;
+      }
+    }
+  }
+
+  &--secondary {
+    color: $btn-secondary-color;
+    background: $btn-secondary-bg;
+
+    &:hover {
+      background: $btn-secondary-hover;
+    }
+
+    &-reverse {
+      color: $btn-secondary-bg;
+      // background: $btn-secondary-color;
+      border-color: $btn-secondary-bg;
+
+      &:hover {
+        color: $btn-secondary-color;
+        background: $btn-secondary-bg;
+        border-color: $btn-secondary-bg;
+      }
+    }
+  }
+
+  &--tertiary {
+    color: $btn-tertiary-color;
+    background: $btn-tertiary-bg;
+
+    &:hover {
+      background: $btn-tertiary-hover;
+    }
+
+    &-reverse {
+      color: $btn-tertiary-bg;
+      // background: $btn-tertiary-color;
+      border-color: $btn-tertiary-bg;
+
+      &:hover {
+        color: $btn-tertiary-color;
+        background: $btn-tertiary-bg;
+        border-color: $btn-tertiary-bg;
+      }
+    }
+  }
+
+  &--gray {
+    background: $btn-gray-bg;
+    color: $btn-gray-color;
+
+    &:hover {
+      background: $btn-gray-hover;
+    }
+
+    &:active {
+      background: $btn-gray-active;
+    }
+
+    &-reverse {
+      color: $btn-gray-color;
+      // background: $btn-gray-color;
+      border-color: $btn-gray-bg;
+
+      &:hover {
+        //background: $btn-gray-bg;
+        border-color: $btn-gray-hover;
+      }
+
+      &:active {
+        background: $btn-gray-active;
+      }
+    }
+  }
+  
+  // Btn Statusses
+  // &--danger {
+  //   background: $btn-danger-bg;
+  //   color: $btn-danger-color;
+
+  //   &:hover {
+  //     background: $btn-danger-hover;
+  //   }
+
+  //   &-reverse {
+  //     color: $btn-danger-bg;
+  //     // background: $btn-danger-color;
+  //     border-color: $btn-danger-bg;
+
+  //     &:hover {
+  //       color: $btn-danger-color;
+  //       background: $btn-danger-bg;
+  //       border-color: $btn-danger-bg;
+  //     }
+  //   }
+  // }
+
+  // &--grad {
+  //   background: $btn-grad-bg;
+  //   color: $btn-grad-color;
+  //   transition: none;
+  //   background-origin: border-box;
+
+  //   &:hover {
+  //     background: $btn-grad-hover;
+  //   }
+  // }
+
+  /* --- Buttons Animated --- */
+  // &--animated {
+  //   z-index: 1;
+    
+  //   &::after {
+  //     content: "";
+  //     display: inline-block;
+  //     width: 100%;
+  //     height: 100%;
+  //     border-radius: $btn-radius;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     z-index: -1;
+  //     transition: all .3s;
+  //     background: inherit;
+  //   }
+
+  //   &:hover {
+  //     &::after {
+  //       transform: scaleX(1.4) scaleY(1.6);
+  //       opacity: 0;
+  //     }
+  //   }
+  // }
+  
+  // --- Buttons Types
+
+  // Buttons Sizes
+  // &--sm {
+  //   font-size: 1.5rem;
+  //   padding: 1rem 2rem;
+  // }
+
+  // &--lg {
+  //   font-size: 2.3rem;
+  //   padding: 2rem 4rem;
+  // }
+
+  // Icons
+  &__icon {
+    fill: $primary-color;
+    color: $primary-color;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(-1px);
+
+    &.icon-arrow-right {
+      margin-left: 1.5rem;
+    }
+
+    &.icon-arrow-left {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &--block {
+    width: 100%;
+    display: block;
+  }
+}

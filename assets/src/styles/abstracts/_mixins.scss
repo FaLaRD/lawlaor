@@ -1,0 +1,106 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-vertical($pos: 0, $right: false) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @if $right {
+    right: $pos;
+  } @else {
+    left: $pos;
+  }
+}
+
+@mixin hide-element {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin show-element($static: static, $top: 0, $left: 0) {
+  position: $static;
+  top: $top;
+  left: $left;
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+}
+
+@mixin truncate-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin element-size($val) {
+  width: $val;
+  height: $val;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  // > .content {
+  &__main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+// @mixin respond-to($breakpoint) {
+//   $raw-query: map-get($breakpoints, $breakpoint);
+
+//   @if $raw-query {
+//     $query: if(
+//       type-of($raw-query) == 'string',
+//       unquote($raw-query),
+//       inspect($raw-query)
+//     );
+
+//     @media #{$query} {
+//       @content;
+//     }
+//   } @else {
+//     @error 'No value found for `#{$breakpoint}`. '
+//          + 'Please make sure it is defined in `$breakpoints` map.';
+//   }
+// }

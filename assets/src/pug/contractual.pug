@@ -1,0 +1,125 @@
+extends templates/main
+
+block variables
+  - const title = 'Contractual Disputes';
+  - const pageClass = 'contractual-page';
+
+block content
+  .container-fluid
+    
+    .row
+
+      .col-md-4
+
+        // acordion
+        +b.accordion.mg-negative
+
+          +e.item
+
+            +e.heading(data-toggle="collapse" data-target="#nav-1" aria-expanded="true" role="button") Practice Areas
+            +e.body(id="nav-1" class="collapse show")
+              +e.main
+                ul.sidebar-nav__list
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Tracker Mortgage
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Overcharging
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Personal Injury
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Probate
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Public Inquiries
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Defamation
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Medical Negligence
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Failure / delay in diagnosis of illness or injury
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") AIB Tracker Mortgage Overcharging
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") PTSB tracker mortgage overcharging
+
+          +e.item
+
+            +e.heading(data-toggle="collapse" data-target="#nav-2" aria-expanded="false" role="button") Data for Individuals
+            +e.body(id="nav-2" class="collapse")
+              +e.main
+                ul.sidebar-nav__list
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Probate
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Public Inquiries
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Defamation
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Medical Negligence
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Failure / delay in diagnosis of illness or injury
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") AIB Tracker Mortgage Overcharging
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") PTSB tracker mortgage overcharging
+
+          +e.item
+
+            +e.heading(data-toggle="collapse" data-target="#nav-3" aria-expanded="false" role="button") Data for Organisations
+            +e.body(id="nav-3" class="collapse")
+              +e.main
+                ul.sidebar-nav__list
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Practice Areas
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Tracker Mortgage Overcharging
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Personal Injury
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Probate
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Public Inquiries
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Defamation
+                  li.sidebar-nav__item
+                    a.sidebar-nav__link(href="#") Medical Negligence
+        // /acordion
+
+      .col-md-8.order-first.order-md-last
+
+        main.primary
+
+          .entry.entry--crop
+            h1.entry__heading Practicle areas
+             span.entry__desc Contractual Disputes
+
+          article.post-entry
+
+            blockquote.intro
+              p Contractual Disputes are very common. Whether we’re aware of it or not, we all enter into contracts on a daily basis. In order to form a contract there needs to be an offer, acceptance and consideration (or payment). A contract can be oral or written.
+
+              p Generally speaking, if one person is unhappy with the outcome of an agreement, the contract may have been breached. If this is the case, you may be entitled to a legal remedy such as compensation of damages, rescission of the contract or specific performance (enforcement) of the contract.
+
+            p We represent a number of clients in breach of contract claims and the following are some examples of cases we have acted in:
+
+            h2 Case Study 1
+              span Income Protection Policy
+
+            p Our client was advised to purchase an income protection policy when taking out car finance. She subsequently suffered an accident and became unable to work. She made a claim under her income protection policy and it was declined on the basis that she had not disclosed a “material fact” on the proposal form. We sued the insurance company for breach of contract. Before the hearing, the insurance company agreed to honour the policy in full and pay her legal costs.
+
+            h2 Case Study 2
+              span Breach / Termination of an Oral Contract
+
+            p Our client was a major supplier to a multinational retailer for a number of years. Over the course of their trading relationship, our client incurred significant expense in business investment and improvement. No written contract was ever formed and only an oral agreement was in place. The retailer terminated the contract without reasonable notice causing our client to suffer considerable financial losses. Notwithstanding the absence of a written contract, we issued proceedings against the retailer and negotiated a substantial settlement in advance of the hearing.
+
+            h2 Case Study 3
+              span Public Liability Insurance (Play Zone)
+
+            p Our client is a business owner that operates a number of play zones for children. An accident took place on one of their premises in which a child suffered injuries. Our client’s insurer refused to provide cover on the basis that a safety statement had not been furnished. We sued the insurance broker and the underwriter 9that was h2 based in the UK). The case settled with the insurer providing our client with  span cover for the accident and paying our client’s legal costs.
+
+            h2 Case Study 1
+              span Public Liability Insurance (Beautician)
+
+            p Our clients were the owners of a number of beauty salons. A customer had a hot wax hair removal treatment on the premises of one of our client’s salons. The customer claimed that she suffered burns and scarring to her face and sued our client for damages for personal injuries. Our clients contacted their insurance company who refused to provide cover for the incident despite their being a valid policy of insurance in place. We sued their insurance company for specific performance of the insurance contract and defended the personal injuries proceedings for our client. The insurers agreed to honour the insurance policy in advance of the hearing and took over the defence of the personal injury action. The insurance company also covered our client’s legal costs.
+
+          .contacts-invite
+            p If you are involved in a contractual dispute, please contact #[a(href="tel:+018725255") Niall on 01 872 5255] or by email #[a(href="mailto:niall@lawlorpartners.ie") niall@lawlorpartners.ie]

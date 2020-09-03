@@ -1,0 +1,97 @@
+/* Select Lang */
+.select-lang {
+  max-height: 3.4rem;
+  white-space: nowrap;
+  display: inline-block;
+
+  .choices {
+    border: none;
+    background: transparent;
+
+    &.is-open {
+      background: transparent;
+    }
+  }
+
+  .choices__item--choice {
+    padding-left: 1rem !important;
+  }
+
+  .choices__inner {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;;
+  }
+
+  .choices__list--dropdown {
+    min-width: 12rem;
+    right: 0;
+
+    .choices__item {
+      font-size: 1.2rem;
+    }
+  }
+
+  .country-icon {
+    margin-right: .5rem;
+    width: 2rem;
+    height: 1rem;
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid $gray--medium;
+  }
+
+  .flag-icon {
+    margin-right: 10px;
+    margin-top: .5rem;
+    width: 2rem;
+    height: 1rem;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid $gray--medium;
+  }
+
+  .md,
+  .md-md {
+    background-image: url("../img/md.png");
+  }
+
+  .ru,
+  .ru-ru {
+    background-image: url("../img/ru.png");
+  }
+
+  .ro,
+  .ro-ro {
+    background-image: url("../img/ro.png");
+  }
+
+  .ua,
+  .ua-ua {
+    background-image: url("../img/ua.png");
+  }
+
+  .en,
+  .en-gb {
+    background-image: url("../img/en.png");
+  }
+
+  .po {
+    background-image: url("../img/po.png");
+  }
+
+  .de {
+    background-image: url("../img/de.png");
+  }
+}
+
+select[class*="js-select"] {
+  opacity: 0;
+  visibility: hidden;
+}
+/* Select Lang */

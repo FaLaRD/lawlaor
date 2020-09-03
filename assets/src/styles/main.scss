@@ -1,0 +1,58 @@
+@charset 'UTF-8';
+
+// 1.Abstracts (Configuration and Helpers)
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+// 2.Vendors (from node_modules)
+// @import "bootstrap/scss/bootstrap-reboot.scss";
+// @import "bootstrap/scss/bootstrap-grid.scss";
+@import "bootstrap/scss/bootstrap.scss";
+@import "swiper/swiper.scss";
+@import "choices.js/src/styles/choices.scss";
+
+// 2.Vendors-extensions
+@import "vendors-extensions/bootstrap";
+@import "vendors-extensions/choices.scss";
+@import "vendors/fontawesome.min";
+
+// 3.Base stuff
+@import "base/base";      // maybe reset
+@import "base/utilities"; // aka helpers
+@import "base/fonts";
+@import "base/typography";
+@import "base/forms";
+@import "base/table";
+@import "base/animations";
+@import "base/print";
+
+// 4.Layout
+@import "layout/main-layout";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/section";
+@import "layout/carousels";
+
+// 5.Components
+@import "components/buttons";
+@import "components/icons";
+@import "components/soc";
+@import "components/logo";
+@import "components/navbar";
+@import "components/select-lang";
+@import "components/accordion";
+@import "components/callback-area";
+@import "components/contacts-widget";
+@import "components/partner";
+@import "components/advantage";
+@import "components/scroll-next";
+@import "components/intro";
+@import "components/news";
+@import "components/feedback";
+
+// 6.Pages (page-specific styles)
+// @import 'pages/forms-page';
+
+// 7.Themes
+// @import 'themes/default';

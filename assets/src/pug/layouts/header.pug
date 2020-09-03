@@ -1,0 +1,36 @@
+mixin header(isLogoClickable)
+  // header
+  header.header
+    .container-fluid
+      .header__wrap
+
+        button.navbar-trigger.d-md-none(type="button")
+          i.navbar-trigger__line
+          i.navbar-trigger__line
+        .navbar-bg
+
+        +logo(isLogoClickable, 'header__logo')
+
+        .header__main
+
+          +b.NAV.main-nav
+            +e.UL.container
+              +e.LI.item
+                +e.A.link(href="#") Home
+              +e.LI.item
+                +e.A.link(href="#") About Us
+              +e.LI.item.active
+                +e.A.link(href="#") Practice Areas
+              +e.LI.item
+                +e.A.link(href="#") News
+              +e.LI.item
+                +e.A.link(href="#") Contact Us
+
+          .select-lang.header__select-lang
+            select.js-select-region
+              option(value="po") Polish
+              option(value="de") Deutch
+              option(value="en") English
+              option(value="ru") Russian
+              option(value="ua") Ukranian
+  // /header

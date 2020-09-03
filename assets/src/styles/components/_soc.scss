@@ -1,0 +1,92 @@
+.soc {
+  $self: &;
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  &__item {
+    display: inline-block;
+    margin: .5rem 1rem;
+    vertical-align: middle;
+    text-indent: -9999px;
+  }
+  
+  &__link {
+    border: 1px solid $white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    transition: all .3s;
+    text-align: center;
+    position: relative;
+
+    &:hover {
+      border-color: transparent;
+      background: $white;
+    }
+
+    // &--fb:hover {
+    //   background: #3b5998;
+    // }
+
+    // &--tw:hover {
+    //   background: #00aced;
+    // }
+
+    // &--vk:hover {
+    //   background: #5d84ae;
+    // }
+
+    // &--gg:hover {
+    //   background: #DD4B39;
+    // }
+
+    // &--yt:hover {
+    //   background: #c4302b;
+    // }
+
+    // &--ok:hover {
+    //   background: #ff9933;
+    // }
+
+    // &--mail:hover {
+    //   background: #005ff9;
+    // }
+
+    // &--inst:hover {
+    //   background: #c13584;
+    // }
+
+    &:hover {
+      #{$self}__icon {
+        fill: $primary-color;
+      }
+
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__icon {
+    fill: #cdcdcd;
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: all .3s;
+
+    @include absolute-center;
+  }
+
+  i {
+    color: $white;
+    font-size: 1.4rem;
+    transition: all .3s;
+    text-indent: 0;
+
+    @include absolute-center;
+  }
+}

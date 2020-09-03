@@ -1,0 +1,8 @@
+mixin logo(isLogoClickable, cls)
+  +b.logo(class=cls)
+    if isLogoClickable
+      +e.SPAN.wrap
+        +e.IMG.img.img-responsive(src="img/logo.png" alt="logo" width="250" height="30")
+    else
+      +e.A.wrap(href="/")
+        +e.IMG.img.img-responsive(src="img/logo.png" alt="logo" width="250" height="30")

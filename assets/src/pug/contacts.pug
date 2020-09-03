@@ -1,0 +1,71 @@
+extends templates/main
+
+block variables
+  - const title = 'Contact Us';
+  - const pageClass = 'contacts-page';
+
+block content
+
+  .container-fluid
+
+    main.primary
+
+      .contacts
+
+        .row
+
+          .col-md-8
+
+            .entry
+              h1.entry__heading Contact
+                span.entry__desc Get in touch
+
+            .callback-area
+              .callback-area__desc We would like to hear from you with any questions you may have
+              form.callback-area__form(action="/" method="POST" name="callback-form")
+                .row
+                  .col-sm-6
+                    .callback-area__field.error
+                      .callback-area__field-main
+                        +icon('email', 'callback-area__icon')
+                        input.callback-area__input.input(type="email" name="user-email" placeholder="Your E-mail" value="Not valid field")
+                      //- span.error__msg Email is not correct
+                  .col-sm-6
+                    .callback-area__field
+                      .callback-area__field-main
+                        +icon('user', 'callback-area__icon')
+                        input.callback-area__input.input(type="text" name="user-name" placeholder="Your Name")
+                .callback-area__field
+                  .callback-area__field-main
+                    +icon('send', 'callback-area__icon')
+                    textarea.callback-area__input.textarea(rows="1" cols="1" name="user-message" placeholder="Message")
+                button.callback-area__btn.btn.btn--primary-reverse(type="submit") Send
+                  +icon('arrow-right', 'btn__icon')
+
+          .col-md-4
+            +b.ASIDE.contacts-widget.mg-negative.cornered
+              +e.main
+                address.footer-contact
+                  .footer-contact__heading Office
+                  p.footer-contact__desc 4 / 5 Arran Square, Arran Quay, Dublin 7, Ireland.
+
+                .footer-contact
+                  .footer-contact__heading Get in touch
+                  ul.footer-contact__list
+                    li.footer-contact__item 
+                      span Tel 
+                      a(href="#") 01 872 5255
+                    li.footer-contact__item 
+                      span Fax
+                      a(href="tel:+") 01 872 5489
+                    li.footer-contact__item #[a(href="mailto:info@lawlorpartners.ie") info@lawlorpartners.ie]
+                .footer-contact
+                  .footer-contact__heading Social
+                  +soc()
+
+  .map-area(id="map")
+
+block script
+  script(src="http://maps.googleapis.com/maps/api/js?sensor=false")
+  script.
+    const markers = [{"title": 'Lawlor Partners',"lat": '53.347783',"lng": '-6.276178',"icon": 'img/pin.svg',"description": '<strong>Lawlor Partners - Solicitors & Tax Consultants</strong>'}];window.onload = function () {const mapOptions = {center: new google.maps.LatLng(markers[0].lat, markers[0].lng),zoom: 10,flat: true,styles: [ { "stylers": [ { "hue": "#4bd6bf" }, { "gamma": "1.58" } ] } ],mapTypeId: google.maps.MapTypeId.ROADMAP};const infoWindow = new google.maps.InfoWindow();const map = new google.maps.Map(document.getElementById("map"), mapOptions);for (i = 0; i < markers.length; i++) {const data = markers[i]const myLatlng = new google.maps.LatLng(data.lat, data.lng);const marker = new google.maps.Marker({position: myLatlng,map: map,title: data.title, icon: data.icon});(function (marker, data) {google.maps.event.addListener(marker, "click", function (e) {infoWindow.setContent(data.description);infoWindow.open(map, marker);});})(marker, data);}}

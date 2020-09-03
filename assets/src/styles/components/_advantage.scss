@@ -1,0 +1,105 @@
+.advantage {
+  display: block;
+  text-align: center;
+  transition: all .3s ease-in-out;
+  max-width: 28rem;
+  padding: 4.5rem 0;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::before {
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border-left: 1rem solid $primary-color;
+    border-top: 1rem solid $primary-color;
+    left: -1rem;
+    top: -1rem;
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &::after {
+    content: '\f178';
+    font-family: fa;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+    color: $white;
+    background-color: $primary-color;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+  }
+
+  &:hover {
+    background: $white;
+    box-shadow: 0 0 2.5rem rgba(1, 1, 1, 0.05);
+
+    &::before,
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__main {
+    margin: 0;
+  }
+
+  &__img-wrap {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__icon {
+    fill: $primary-color;
+    max-width: 100%;
+    height: auto;
+
+    width: auto;
+    height: 10rem;
+
+    @include absolute-center;
+  }
+
+  &__caption {
+    position: relative;
+    font-size: 2.2rem;
+    color: $font-base-color;
+    font-weight: 600;
+    font-family: $headings-fonts-stack;
+    padding: 2rem 1rem 0;
+    margin-top: 2.5rem;
+    line-height: 1.2;
+
+    &::before {
+      content: '';
+      border-top: 2px solid $primary-color;
+      width: 7.5rem;
+      height: 0;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-50%, 1px);
+    }
+  }
+}

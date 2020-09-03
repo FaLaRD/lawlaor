@@ -1,0 +1,308 @@
+.section {
+  padding: 4rem 0;
+
+  @media (min-width: $md) {
+    padding: 8rem 0;
+  }
+
+  &--bg {
+    background: #f5f5f5;
+  }
+}
+
+.wrapper {
+  counter-reset: section-order;
+}
+
+.promo-section {
+  padding: 4rem 0;
+
+  @media (min-width: $md) {
+    padding: 8rem 0;
+  }
+
+  &__container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .container-fluid {
+    max-width: 1500px;
+  }
+
+  .entry {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $sm) {
+      text-align: left;
+      padding-left: 12rem;
+      padding-right: 0;
+      max-width: 72rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &::before {
+      content: counter(section-order, decimal-leading-zero);
+      counter-increment: section-order;
+      font-size: 10rem;
+      color: #e6e6e6;
+      line-height: 1;
+      font-weight: 700;
+      position: absolute;
+      left: -3rem;
+      top: 0;
+      z-index: -1;
+    }
+
+    &::after {
+      left: 10rem;
+
+      @media (max-width: $sm--mw) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.section-negative {
+  .section {
+    padding-bottom: 19rem;
+
+    @media (min-width: $md) {
+      padding-bottom: 23rem;
+    }
+  }
+
+  .experience {
+    margin-top: -15rem;
+  }
+}
+
+.section-carousel-helpers {
+  background: $white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 2.5rem 8rem;
+  color: $primary-color;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  .swiper-pagination-current {
+    color: $font-base-color;
+  }
+
+  .section-carousel-prev,
+  .section-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+  }
+
+  .section-carousel-prev {
+    left: 2.5rem;
+  }
+
+  .section-carousel-next {
+    right: 2.5rem;
+  }
+
+  svg {
+    fill: #d5d5d5;
+    transition: all .3s;
+
+    &:hover {
+      fill: $primary-color;
+    }
+  }
+}
+
+.intro-section {
+  padding-top: 4rem;
+}
+
+.advantages-section {
+  background: url('../img/section-poll-bg.jpg') no-repeat center / cover;
+  position: relative;
+  padding: 6rem 0;
+
+  @media (min-width: $md) {
+    padding: 10rem 0;
+  }
+
+  @media (min-width: $xl) {
+    padding: 14rem 0;
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255, .8);
+  }
+
+  .container-fluid {
+    max-width: 1620px;
+  }
+
+  .entry {
+    &::before {
+      color: $white;
+    }
+  }
+
+  .swiper-container {
+    padding: 1rem;
+    position: static;
+  }
+
+  .section-carousel-helpers {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.blog-section {
+  .container-fluid {
+    max-width: 1500px;
+  }
+
+  .swiper-container {
+    padding: 1rem;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .news {
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .section-carousel-helpers {
+    margin-top: 4rem;
+  }
+}
+
+.contacts-section {
+  .callback-area {
+    max-width: 99rem;
+    margin-left: auto;
+    height: auto;
+    padding: 0 1.5rem;
+
+    @media (min-width: $md) {
+      padding-left: 12rem;
+    }
+
+    @media (min-width: $xl) {
+      padding-right: 11rem;
+    }
+
+    &__desc {
+      @media (min-width: $md) {
+        margin-bottom: 6rem;
+      }
+    }
+
+    &__btn {
+      @media (min-width: $md) {
+        margin-top: 4rem;
+      }
+    }
+  }
+
+  .contacts-widget {
+    height: 100%;
+
+    &__main {
+      background-image: url('../img/contacts-bg.jpg');
+
+      @media (min-width: $xl) {
+        padding-left: 16rem;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+.feedback-section {
+  background: #f5f5f5;
+
+  @media (min-width: $xl) {
+    background: linear-gradient(to right, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
+  }
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    height: 14rem;
+    left: 0;
+    z-index: 1;
+  }
+
+  .entry {
+    margin-bottom: 0;
+    min-height: 14rem;
+  }
+
+  .feedback-wrap {
+    background: #f5f5f5;
+    position: relative;
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @media (min-width: $md) {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+
+    @media (min-width: $xl) {
+      padding-right: 25rem;
+    }
+
+    @media (min-width: 1600px) {
+      padding-right: 42rem;
+    }
+  }
+
+  .section-carousel {
+    padding: 0 0 1rem;
+
+    @media (min-width: $xl) {
+      margin-top: -14rem;
+    }
+  }
+
+  .section-carousel-helpers {
+    margin-top: 4rem;
+
+    @media (min-width: $xl) {
+      margin-top: 0;
+      position: absolute;
+      right: 0;
+      bottom: 9rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'fa';
+  src: url('../fonts/fa-regular-400.woff2') format('woff2'),
+       url('../fonts/fa-regular-400.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fa';
+  src: url('../fonts/fa-solid-900.woff2') format('woff2'),
+       url('../fonts/fa-solid-900.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fab';
+  src: url('../fonts/fa-brands-400.woff2') format('woff2'),
+       url('../fonts/fa-brands-400.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amazing Grotesk';
+  src: url('../fonts/AmazingGrotesk-DemiBold.woff2') format('woff2'),
+       url('../fonts/AmazingGrotesk-DemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}

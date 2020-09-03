@@ -1,0 +1,109 @@
+// Basic Definitions
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a:focus {
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+::selection {
+  background: $primary-color;
+  color: $white;
+}
+
+html {
+  height: 100%;
+}
+
+html {
+  font-size: 56.25%; // ppx
+
+  @media (min-width: $md) {
+    font-size: 50%; // 8px
+  }
+  
+  @media (min-width: $lg) {
+    font-size: 62.5%; // 10px
+  }
+
+  /*@media (min-width: 1200px) {
+    font-size: 50%;
+  }
+
+  @media (min-width: 1800px) {
+    font-size: 75%;
+  }*/
+}
+
+body {
+  background: $body-bg;
+  height: 100%;
+}
+
+.container-fluid {
+  max-width: $layout-max-width;
+}
+
+.overlay {
+  background: rgba(#222, .5);
+  z-index: $overlayZIndex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar {
+  background: $black;
+  border-radius: 5px;
+}
+
+.simplebar-track {
+  background: #d3d3d3;
+  border-radius: 5px;
+}
+
+.simplebar-vertical {
+  width: 4px !important;  
+}
+
+.simplebar-horizontal {
+  height: 4px !important;  
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  top: 0;
+  height: 100%;
+}
+
+.js-custom-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.js-dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+
+  .js-dropdown {
+    display: none;
+    cursor: default;
+    z-index: $dropdownZIndex;
+  }
+
+  &.opened .js-dropdown {
+    display: block;
+    animation: .3s fadeInUp;
+  }
+}

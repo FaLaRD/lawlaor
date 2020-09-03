@@ -1,0 +1,26 @@
+mixin footer()
+  // footer
+  .footer
+    .container-fluid
+      .footer__main
+        .row
+          .col-sm-6.col-md-4
+            address.footer-contact
+              .footer-contact__heading Office
+              p.footer-contact__desc 4 / 5 Arran Square, Arran Quay, Dublin 7, Ireland.
+          .col-sm-6.col-md-4
+            .footer-contact
+              .footer-contact__heading Get in touch
+              ul.footer-contact__list
+                li.footer-contact__item 
+                  span Tel 
+                  a(href="#") 01 872 5255
+                li.footer-contact__item 
+                  span Fax
+                  a(href="tel:+") 01 872 5489
+                li.footer-contact__item #[a(href="mailto:info@lawlorpartners.ie") info@lawlorpartners.ie]
+          .col-md-4
+            .footer-contact
+              .footer-contact__heading Social
+              +soc()
+      small.copy &copy; 2016 Lawlor Partners All Rights Reserved.

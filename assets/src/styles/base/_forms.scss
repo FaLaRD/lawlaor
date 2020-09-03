@@ -1,0 +1,220 @@
+::placeholder {
+  color: $input-placeholder-color;
+}
+
+input.input,
+textarea.textarea {
+  padding: 1.5rem 2rem;
+  width: 100%;
+  font-size: $input-font-size;
+  border: none;
+  border-bottom: 1px solid $input-border-normal;
+  outline: none;
+  border-radius: $input-border-radius;
+  background: $white;
+  font-family: $font-base-stack;
+  transition: all .3s;
+  color: $input-typing-color;
+
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
+  &:focus {
+    border-color: $input-border-focus;
+    //box-shadow: $input-focus-shadow;
+  }
+}
+
+textarea.textarea {
+  resize: vertical;
+}
+
+button,
+button:focus {
+  outline: none;
+  font-family: $font-base-stack;
+  cursor: pointer;
+}
+
+label {
+  user-select: none;
+  cursor: pointer;
+  font-size: $input-font-size;
+
+  span {
+    color: $primary-color;
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+/* Checkbox */
+.checkbox-label {
+  &__main {
+    font-size: $input-font-size;
+    cursor: pointer;
+    color: $font-base-color;
+    padding: 0 0 0 2.5rem;
+    position: relative;
+    margin: 0;
+    user-select: none;
+    line-height: 1.2;
+    display: block;
+    
+    min-width: 1.6rem;
+    min-height: 1.6rem;
+
+    &::before {
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      border: 1px solid $gray--medium;
+      position: absolute;
+      left: 0;
+      top: .1;
+      border-radius: 2px;
+    }
+  }
+
+  &__input {
+    @include hide-element;
+  }
+
+  &__input:checked + .checkbox-label__main::before {
+    content: "";
+    background-color: $primary-color;
+    position: absolute;
+    border-color: $primary-color;
+  }
+
+  &__input:checked + .checkbox-label__main::after {
+    content: "\f00c";
+    position: absolute;
+    left: .3rem;
+    top: .4rem;
+    font-size: 1.1rem;
+    color: $white;
+    line-height: 1;    
+    font-family: fa;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &__input[disabled] + .checkbox-label__main {
+    opacity: .5;
+    cursor: default;
+  }
+
+  &__amount {
+    color: $gray;
+    font-size: 1.2rem;
+  }
+}
+/* Checkbox */
+
+/* Radio */
+.radio-label {
+  &__main {
+    font-size: $input-font-size;
+    cursor: pointer;
+    color: $font-base-color;
+    height: 100%;
+    padding: 0 0 0 2.5rem;
+    position: relative;
+    margin: 0;
+    user-select: none;
+    line-height: 1.2;
+    display: block;
+    
+    min-width: 1.6rem;
+    min-height: 1.6rem;
+
+    &::before {
+      content: "";
+      width: 1.6rem;
+      height: 1.6rem;
+      border: 1px solid #e7e7e7;
+      position: absolute;
+      left: 0;
+      top: .1rem;
+      border-radius: 50%;
+      background: $white;
+    }
+
+    &::after {
+      content: "";
+      width: .8rem;
+      height: .8rem;
+      position: absolute;
+      left: .4rem;
+      top: .5rem;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+  }
+
+  &__input {
+    @include hide-element;
+  }
+
+  &__input:checked + .radio-label__main::before {
+    //border-color: $primary-color;
+  }
+
+  &__input:checked + .radio-label__main::after {
+    background-color: $primary-color;
+  }
+
+  &__input[disabled] + .radio-label__main {
+    opacity: .5;
+    cursor: default;
+  }
+
+  &__amount {
+    color: $dark--medium;
+    font-size: 1.2rem;
+  }
+}
+/* Radio */
+
+/* Type File */
+.upload-file {
+  position: relative;
+
+  [class*="fa"] {
+    color: $primary-color;
+    font-size: 1.6rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    color: $dark--medium;
+    transition: all .3s;
+    cursor: pointer;
+    display: block;
+    border: 1px dashed $gray--medium;
+    border-radius: $input-border-radius;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 1.5rem 1.5rem 1.5rem 4rem;
+    line-height: 1;
+  }
+}
+/* Type File */

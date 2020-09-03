@@ -1,0 +1,368 @@
+extends templates/main
+
+block variables
+  - const title = 'Home page';
+  - const pageClass = 'index-page';
+  - const logoIndex = true;
+
+block header
+  +header(true)
+
+  // intro
+  section.promo-section.intro-section
+
+    .promo-section__container
+
+      .intro
+
+        .entry
+          .entry__heading About us
+            span.entry__desc Solicitors &amp; Tax Consultants all under the one roof.
+
+        .intro__container
+
+          .intro__hero-wrap
+            .intro__hero
+              img.intro__img(src="img/about-promo.jpg" alt="")
+            .scroll-next.d-none.d-xl-block
+              .scroll-next__desc Scroll down
+              +icon('scroll', 'scroll-next__icon')
+
+        .intro__info-main
+          p.intro__desc Lawlor Kiernan LLP is a progressive legal and tax firm offering specialist advice. The practice was founded in 1995 and has established a reputation for the provision of high quality legal and tax services.
+
+          a.intro__btn.btn(href="#") 
+            span Learn More
+            +icon('arrow-right', 'intro__btn-icon')
+
+          .partner__details
+            ul
+              li 
+                a(href="tel:+018725255") 
+                  +icon('phone-call')
+                  span 01 872 5255
+              li 
+                a(href="mailto:info@lawlorpartners.ie")
+                  +icon('email')
+                  span info@lawlorpartners.ie
+  // /intro
+
+  // advantages
+  section.promo-section.advantages-section
+
+    .promo-section__container
+
+      .entry
+        .entry__heading Practice Areas
+          span.entry__desc We know how to defend your rights
+
+      .container-fluid
+
+        .swiper-container.section-carousel.js-advantages-carousel
+
+          .swiper-wrapper
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('shield', 'advantage__icon')
+                  +e.FIGCAPTION.caption Data Protection
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('money', 'advantage__icon')
+                  +e.FIGCAPTION.caption Tracker Mortgage Overcharging
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +e.IMG.icon(src="img/broken-hand.png" alt="")
+                  +e.FIGCAPTION.caption Personal Injury
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('diploma', 'advantage__icon')
+                  +e.FIGCAPTION.caption Probate
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('help', 'advantage__icon')
+                  +e.FIGCAPTION.caption Public Inquiries
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('money', 'advantage__icon')
+                  +e.FIGCAPTION.caption Tracker Mortgage Overcharging
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('diploma', 'advantage__icon')
+                  +e.FIGCAPTION.caption Probate
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('help', 'advantage__icon')
+                  +e.FIGCAPTION.caption Public Inquiries
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +icon('shield', 'advantage__icon')
+                  +e.FIGCAPTION.caption Data Protection
+
+            .swiper-slide
+
+              +b.A.advantage(href="#")
+                +e.FIGURE.main
+                  +e.img-wrap
+                    +e.IMG.icon(src="img/broken-hand.png" alt="")
+                  +e.FIGCAPTION.caption Personal Injury
+
+          .section-carousel-helpers
+
+            .section-carousel-pagination.js-advantages-pagination
+
+            .section-carousel-prev.js-advantages-prev
+              +icon('arrow-left', 'section-carousel-prev__icon')
+            .section-carousel-next.js-advantages-next
+              +icon('arrow-right', 'section-carousel-next__icon')
+  // /advantages
+
+  // news-section
+  section.promo-section.blog-section
+
+    .promo-section__container
+
+      .entry
+        .entry__heading Personal
+          span.entry__desc Blog 
+            small / #[a(href="#") read more]
+              i.fa.fa-long-arrow-right
+
+      .container-fluid
+
+        .swiper-container.section-carousel.js-news-carousel
+
+          .swiper-wrapper
+
+            .swiper-slide
+
+              +b.ARTICLE.news
+                +e.A.img-wrap(href="#")
+                  +e.IMG.img(src="img/news-1.jpg" alt="news")
+                +e.details
+                  +e.meta
+                    +e.TIME.date(datetime="11-07") Nov #[strong 07]
+                    +e.viewed
+                      +icon('eye', 'news__viewed-icon')
+                      span 256
+                  +e.heading
+                    +e.A.heading-link(href="#") Demystifying Myths and Misunderstandings about GDPR Breach Compensation
+                  +e.P.excerpt Though the GDPR has been in effect for some time now, there are still a few factors about it that are either misinterpreted or&hellip;
+                +e.A.more(href="#")
+                  +icon('arrow-right', 'news__more-icon')
+
+            .swiper-slide
+
+              +b.ARTICLE.news
+                +e.A.img-wrap(href="#")
+                  +e.IMG.img(src="img/news-2.jpg" alt="news")
+                +e.details
+                  +e.meta
+                    +e.TIME.date(datetime="12-03") Dec #[strong 03]
+                    +e.viewed
+                      +icon('eye', 'news__viewed-icon')
+                      span 124
+                  +e.heading
+                    +e.A.heading-link(href="#") Are You Affected By The Tracker Mortgage Scandal?
+                  +e.P.excerpt In 2015, it was revealed that Permanent TSB was overcharging customers on their mortgage and then in 2016, AIB was held up for having a similar practice. While the Central&hellip;
+                +e.A.more(href="#")
+                  +icon('arrow-right', 'news__more-icon')
+
+            .swiper-slide
+
+              +b.ARTICLE.news
+                +e.A.img-wrap(href="#")
+                  +e.IMG.img(src="img/news-3.jpg" alt="news")
+                +e.details
+                  +e.meta
+                    +e.TIME.date(datetime="02-21") Feb #[strong 21]
+                    +e.viewed
+                      +icon('eye', 'news__viewed-icon')
+                      span 21
+                  +e.heading
+                    +e.A.heading-link(href="#") Tracker Mortgage Compensation Claim Basis
+                  +e.P.excerpt It is clear that over 13,000 banking customers were charged a wrong interest rate on the tracker mortgage loans by different banks. But, in the height of publicity and banks&hellip;
+                +e.A.more(href="#")
+                  +icon('arrow-right', 'news__more-icon')
+
+            .swiper-slide
+
+              +b.ARTICLE.news
+                +e.A.img-wrap(href="#")
+                  +e.IMG.img(src="img/about-promo.jpg" alt="news")
+                +e.details
+                  +e.meta
+                    +e.TIME.date(datetime="02-20") Feb #[strong 20]
+                    +e.viewed
+                      +icon('eye', 'news__viewed-icon')
+                      span 21
+                  +e.heading
+                    +e.A.heading-link(href="#") Tracker Mortgage
+                  +e.P.excerpt It is clear that over 13,000 banking customers&hellip;
+                +e.A.more(href="#")
+                  +icon('arrow-right', 'news__more-icon')
+          
+          .text-center
+            .section-carousel-helpers
+            
+              .section-carousel-pagination.js-news-pagination
+
+              .section-carousel-prev.js-news-prev
+                +icon('arrow-left', 'section-carousel-prev__icon')
+              .section-carousel-next.js-news-next
+                +icon('arrow-right', 'section-carousel-next__icon')
+  // /news-section
+
+  // contacts-section
+  section.promo-section.contacts-section
+
+    .promo-section__container
+
+      .row
+
+        .col-md-7
+
+          .entry
+            .entry__heading Contact
+              span.entry__desc Get in touch
+
+          .callback-area
+            .callback-area__desc We would like to hear from you with any questions you may have
+            form.callback-area__form(action="/" method="POST" name="callback-form")
+              .row
+                .col-sm-6
+                  .callback-area__field
+                    .callback-area__field-main
+                      +icon('email', 'callback-area__icon')
+                      input.callback-area__input.input(type="email" name="user-email" placeholder="Your E-mail")
+                .col-sm-6
+                  .callback-area__field
+                    .callback-area__field-main
+                      +icon('user', 'callback-area__icon')
+                      input.callback-area__input.input(type="text" name="user-name" placeholder="Your Name")
+              .callback-area__field
+                .callback-area__field-main
+                  +icon('send', 'callback-area__icon')
+                  textarea.callback-area__input.textarea(rows="1" cols="1" name="user-message" placeholder="Message")
+              .text-right
+                button.callback-area__btn.btn.btn--primary-reverse(type="submit") Send
+                  +icon('arrow-right', 'btn__icon')
+
+        .col-md-5
+          +b.ASIDE.contacts-widget
+            +e.main
+              address.footer-contact
+                .footer-contact__heading Office
+                p.footer-contact__desc 4 / 5 Arran Square, Arran Quay, Dublin 7, Ireland.
+
+              .footer-contact
+                .footer-contact__heading Get in touch
+                ul.footer-contact__list
+                  li.footer-contact__item 
+                    span Tel 
+                    a(href="#") 01 872 5255
+                  li.footer-contact__item 
+                    span Fax
+                    a(href="tel:+") 01 872 5489
+                  li.footer-contact__item #[a(href="mailto:info@lawlorpartners.ie") info@lawlorpartners.ie]
+              .footer-contact
+                .footer-contact__heading Social
+                +soc()
+  // /contacts-section
+
+  // feedback-section
+  section.promo-section.feedback-section
+
+    .promo-section__container
+
+      .entry
+        .entry__heading Reviews
+          span.entry__desc Feedback
+
+      .container-fluid
+
+        .feedback-wrap
+
+          .swiper-container.section-carousel.js-interactive-carousel
+
+            .swiper-wrapper
+
+              .swiper-slide
+
+                +b.FIGURE.feedback
+                  +e.img-wrap
+                    +e.IMG.img(src="img/member.jpg" alt="")
+                  +e.FIGCAPTION.details
+                    +e.P.desc Et vix porro repudiare voluptatum, at per assum ancillae, justo verear has in. Mea fugit eripuit id, labitur numquam aliquando ei eam. Cu mea scripta aperiam delicatissimi. Ad ius dicam atomorum, ei omnesque vulputate abhorreant vix. Duo brute molestiae ei.
+                    +e.person
+                      +e.person-name Tima Simone
+                      +e.person-position Chief Executive Offices
+
+              .swiper-slide
+
+                +b.FIGURE.feedback
+                  +e.img-wrap
+                    +e.IMG.img(src="img/partner-2.jpg" alt="")
+                  +e.FIGCAPTION.details
+                    +e.P.desc Et vix porro repudiare voluptatum, at per assum ancillae, justo verear has in. Mea fugit eripuit id, labitur numquam aliquando ei eam. Cu mea scripta aperiam delicatissimi. Ad ius dicam atomorum, ei omnesque vulputate abhorreant vix. Duo brute molestiae ei. Et vix porro repudiare voluptatum, at per reant vix. Duo brute molestiae ei.
+                    +e.person
+                      +e.person-name Olivia Lawlor
+                      +e.person-position Chief Executive Offices
+
+              .swiper-slide
+
+                +b.FIGURE.feedback
+                  +e.img-wrap
+                    +e.IMG.img(src="img/partner-4.jpg" alt="")
+                  +e.FIGCAPTION.details
+                    +e.P.desc Et vix porro repudiare voluptatum, at per assum ancillae. Et vix porro repudiare voluptatum, at per assum ancillae.
+                    +e.person
+                      +e.person-name Fintan Lawlor
+                      +e.person-position Chief Executive Offices
+
+          .text-center
+            .section-carousel-helpers
+              .section-carousel-pagination.js-interactive-pagination
+
+              .section-carousel-prev.js-interactive-prev
+                +icon('arrow-left', 'section-carousel-prev__icon')
+              .section-carousel-next.js-interactive-next
+                +icon('arrow-right', 'section-carousel-next__icon')
+  // /feedback-section
+
+block content
