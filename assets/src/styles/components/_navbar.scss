@@ -4,7 +4,6 @@
  * ==================
  */
 
-// ---------------------- toggle
 .navbar-trigger {
   $self: &;
 
@@ -71,17 +70,11 @@
     }
   }
 }
-// ---------------------- toggle
 
-// ---------------------- core
 .main-nav {
   $self: &;
-  
-  /* --- Desktop Navbar --- */
+
   @media (min-width: $md) {
-    // Base Navbar START
-    // -----------------------------------------
-    // --- First-Level
     &__container {
       display: flex;
       line-height: 1.2;
@@ -214,13 +207,11 @@
   }
   /* --- /Mobile Navbar --- */
 }
-// ---------------------- core
 
 body.is-navbar-opened {
   overflow: hidden;
 }
 
-/* --- Navbar BG --- */
 .navbar-bg {
   position: fixed;
   left: 1.5rem;
@@ -256,8 +247,6 @@ body.is-navbar-opened {
     transform: scale(80);
   }
 }
-/* --- Navbar BG --- */
-
 /**
  * ================
  * = Main Nav END =

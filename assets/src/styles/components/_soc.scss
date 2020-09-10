@@ -29,38 +29,6 @@
       background: $white;
     }
 
-    // &--fb:hover {
-    //   background: #3b5998;
-    // }
-
-    // &--tw:hover {
-    //   background: #00aced;
-    // }
-
-    // &--vk:hover {
-    //   background: #5d84ae;
-    // }
-
-    // &--gg:hover {
-    //   background: #DD4B39;
-    // }
-
-    // &--yt:hover {
-    //   background: #c4302b;
-    // }
-
-    // &--ok:hover {
-    //   background: #ff9933;
-    // }
-
-    // &--mail:hover {
-    //   background: #005ff9;
-    // }
-
-    // &--inst:hover {
-    //   background: #c13584;
-    // }
-
     &:hover {
       #{$self}__icon {
         fill: $primary-color;

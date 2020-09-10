@@ -243,13 +243,12 @@
 
 .feedback-section {
   background: #f5f5f5;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @media (min-width: $xl) {
     background: linear-gradient(to right, #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%);
   }
-
-  padding-top: 0;
-  padding-bottom: 0;
 
   &::before {
     content: "";

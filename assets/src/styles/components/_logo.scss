@@ -1,8 +1,6 @@
 .logo {
   transition: all .3s;
   white-space: nowrap;
-  
-  &__wrap {}
 
   &__img {
     @media (min-width: $md) {

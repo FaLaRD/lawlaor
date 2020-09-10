@@ -6,20 +6,17 @@
 @import "abstracts/variables";
 
 // 2.Vendors (from node_modules)
-// @import "bootstrap/scss/bootstrap-reboot.scss";
-// @import "bootstrap/scss/bootstrap-grid.scss";
 @import "bootstrap/scss/bootstrap.scss";
 @import "swiper/swiper.scss";
 @import "choices.js/src/styles/choices.scss";
 
 // 2.Vendors-extensions
-@import "vendors-extensions/bootstrap";
 @import "vendors-extensions/choices.scss";
 @import "vendors/fontawesome.min";
 
 // 3.Base stuff
-@import "base/base";      // maybe reset
-@import "base/utilities"; // aka helpers
+@import "base/base";
+@import "base/utilities";
 @import "base/fonts";
 @import "base/typography";
 @import "base/forms";
@@ -52,7 +49,5 @@
 @import "components/feedback";
 
 // 6.Pages (page-specific styles)
-// @import 'pages/forms-page';
 
 // 7.Themes
-// @import 'themes/default';
