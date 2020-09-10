@@ -33,7 +33,8 @@ const sourcesObject = {
     svg: './assets/src/images/icons/**/*.svg',
     allPug: './assets/src/pug/*.pug',
     scripts: () => JSON.parse(fs.readFileSync('./assets/src/scripts/init.json')).map((path) => `./assets/src/scripts/${path}`),
-    allScripts: './assets/src/scripts/**/*'
+    allScripts: './assets/src/scripts/**/*',
+    fonts: './assets/src/fonts/**/*.*'
 };
 
 const buildObject = {
@@ -45,7 +46,8 @@ const buildObject = {
         spritesImages: './assets/build/img',
     },
     svg: './assets/build/img',
-    script: './assets/build/js'
+    script: './assets/build/js',
+    fonts: './assets/build/fonts/'
 };
 
 let devMode = true;
@@ -70,6 +72,11 @@ gulp.task('images', () => {
         .pipe(gulpif(!devMode, imageMin()))
         .pipe(gulp.dest(buildObject.images))
         .pipe(gulpif(watchMode, browserSync.stream()));
+});
+
+gulp.task('fonts', () => {
+    return gulp.src(sourcesObject.fonts)
+        .pipe(gulp.dest(buildObject.fonts));
 });
 
 gulp.task('sprites', (done) => {
@@ -156,7 +163,7 @@ gulp.task('browserSync', () => {
     gulp.watch(sourcesObject.allPug).on("change", reload);
 });
 
-gulp.task('build', gulp.series('sprites', 'images', 'pug', 'style', 'svg', 'script', (done) => {
+gulp.task('build', gulp.series('sprites', 'images', 'fonts', 'pug', 'style', 'svg', 'script', (done) => {
     console.log(cowSay.say({
         text : "I'm build your project as developer mode!",
         e : "oO",

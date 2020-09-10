@@ -6,7 +6,10 @@
 @import "abstracts/variables";
 
 // 2.Vendors (from node_modules)
-@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/nav";
 @import "swiper/swiper.scss";
 @import "choices.js/src/styles/choices.scss";
 
